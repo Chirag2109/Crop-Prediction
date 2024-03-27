@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>Crop Prediction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <style>
+body{
+    background-color:#E3F4F4;               
+}
+.label{
+    font-size: 20px;
+}
+.field{
+    font-size: 20px;
+    width:50%
+}
+        .subfield{ 
+            font-size:15px;
+            color:#FF0060;
+        }
+div{
+    padding:10px;
+    margin-top:10px;
+    margin-left:32%;
+}
+h1{
+    color:#1F6E8C;
+    text-align:center;
+    margin-top:50px;
+    font-size:40px;
+}
+#button{
+    background-color:#1F6E8C;
+    padding:5px;
+    padding-left:10px;
+    padding-right:10px;
+    font-size:20px;
+    border-radius:5px;
+    color:white;
+    margin-left:20%;
+}
+    </style>
+    <body>
+        <form action="{{ url_for('get_value')}}" method="post">
+         
+    <h1>Crop Growth Prediction Model</h1>
+    <br>
+<div>
+    <label for="n" class='label'><b>N Value : </b></label>
+    <br>
+    <input type="text" class="field" placeholder="eg. 30" name="n" id="email" required>
+    <br>
+    <label class='subfield'>N value : Range 1 to 140</label>
+<br>
+    <br>
+
+    <label for="p" class='label'><b>P Value : </b></label>
+    <br>
+    <input type="text" class="field" placeholder="eg. 45" name="p" id="email" required>
+    <br>
+    <label class='subfield'>P value : Range 1 to 95</label>
+<br>
+    <br>
+
+    <label for="k" class='label'><b>K Value : </b></label>
+    <br>
+    <input type="text" class="field" placeholder="eg. 25" name="k" id="email" required>
+    <br>
+    <label class='subfield'>K value : Range 1 to 80</label>
+<br>
+    <br>
+
+    <label for="tmp" class='label'><b>Temperature : </b></label>
+    <br>
+    <input type="text" class="field" placeholder="eg. 29.884305" name="tmp" id="email" required>
+    <br>
+    <label class='subfield'>Temperature : Range 1 to 30.284966</label>
+<br>
+    <br>
+
+    <label for="hmd" class='label'><b>Humidity : </b></label>
+    <br>
+    <input type="text" class="field" placeholder="eg. 94.037115" name="hmd" id="email" required>
+    <br>
+    <label class='subfield'>Humidity : Range 1 to 94.037115</label>
+<br>
+    <br>
+    
+    <label for="ph" class='label'><b>ph value : </b></label>
+    <br>
+    <input type="text" class="field" placeholder="eg. 6.502985" name="ph" id="psw" required>
+    <br>
+    <label class='subfield'>Ph Value : Range 6.251420 to 7.538631</label>
+    
+<br>
+    <br>
+    
+    <label for="rf" class='label'><b>Rainfall : </b></label>
+    <br>
+    <input type="text" class="field" placeholder="eg. 20.123456" name="rf" id="psw-repeat" required>
+    <br>
+    <label class='subfield'>Rainfall : Range 20.390205 to 202.935536</label>
+    
+    <br>
+    <br>
+    <br>
+
+
+    <button type="submit" id="button">Submit</button>
+<div>  
+</form>
+
+    </body>
+</html>
